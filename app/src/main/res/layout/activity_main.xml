@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#f9f9f9"
+    >
+
+
+            <TextView
+                android:id="@+id/infoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#3f51b5"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="#f9f9f9"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <!--<org.angmarch.views.NiceSpinner-->
+                <!--android:id="@+id/mode_spinner"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2"-->
+                <!--android:textColor="#363636"-->
+                <!--/>-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mode"
+                        android:textAllCaps="true"
+                        android:textColor="#363636"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radioButtonGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <me.omidh.liquidradiobutton.LiquidRadioButton
+                            android:id="@+id/autoRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Automatic"
+                            app:lrb_checkedColor="@android:color/holo_green_dark"
+                            app:lrb_explodeCount="3"
+                            app:lrb_inAnimDuration="500"
+                            app:lrb_innerCircleRadius="15dp"
+                            app:lrb_outAnimDuration="500"
+                            app:lrb_outterPadding="8dp"
+                            app:lrb_strokeRadius="23dp"
+                            app:lrb_strokeWidth="1dp"
+                            app:lrb_unCheckedColor="@android:color/holo_red_light" />
+
+                        <me.omidh.liquidradiobutton.LiquidRadioButton
+                            android:id="@+id/manualRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Manual"
+                            app:lrb_checkedColor="@android:color/holo_green_dark"
+                            app:lrb_explodeCount="3"
+                            app:lrb_inAnimDuration="500"
+                            app:lrb_innerCircleRadius="15dp"
+                            app:lrb_outAnimDuration="500"
+                            app:lrb_outterPadding="8dp"
+                            app:lrb_strokeRadius="23dp"
+                            app:lrb_strokeWidth="1dp"
+                            app:lrb_unCheckedColor="@android:color/holo_red_light" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <com.sdsmdg.harjot.crollerTest.Croller
+                    android:id="@+id/croller"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="3" />
+
+
+            </LinearLayout>
+    <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:rb_color="#0099CC"
+        app:rb_duration="3000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="6">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <Button
+                        android:id="@+id/buttonUp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_background"
+                        android:foreground="@drawable/up"
+                        android:shadowColor="#363636"
+                        android:theme="@style/DirectionButton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/buttonLeft"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:foreground="@drawable/left"
+                        android:src="@drawable/up"
+                        android:theme="@style/DirectionButton"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.varunest.sparkbutton.SparkButton
+                            android:id="@+id/spark_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            app:sparkbutton_activeImage="@drawable/pause"
+                            app:sparkbutton_iconSize="120dp"
+                            app:sparkbutton_inActiveImage="@drawable/start"
+                            app:sparkbutton_primaryColor="@color/colorPrimary"
+                            app:sparkbutton_secondaryColor="@color/colorAccent"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonRight"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:foreground="@drawable/right"
+                        android:src="@drawable/up"
+                        android:theme="@style/DirectionButton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <Button
+                        android:id="@+id/buttonDown"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/button_background"
+                        android:foreground="@drawable/down"
+                        android:src="@drawable/up"
+                        android:theme="@style/DirectionButton" />
+                </LinearLayout>
+            </LinearLayout>
+    </com.skyfishjy.library.RippleBackground>
+
+</LinearLayout>
